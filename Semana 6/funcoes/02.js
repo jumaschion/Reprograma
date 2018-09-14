@@ -90,6 +90,7 @@ function checkAnagram (str1, str2) {
 // e a area dele.
 
  function calculoCirculo (radius) {
-     return 2 * math.pi * radius
+     const 2 * math.pi * radius
+     const 
      
  }

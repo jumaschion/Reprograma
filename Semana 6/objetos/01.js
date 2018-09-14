@@ -5,7 +5,13 @@
 // de pokemons do Wikipedia.
 // ref: https://pt.wikipedia.org/wiki/Lista_de_Pok%C3%A9mon
 
-
+const pokemon = { 
+    nome: "Charmander",
+    numero_nacional:  "4",
+    nome_japones: "Hitokage",
+    numero_johto: 340,
+    evolui_de: "ovo"
+}
 
 
 // 2.
@@ -14,7 +20,8 @@
 // And my name in Japanese is < >."
 
 
-
+    console.log(" Hello, my name is " + pokemon.nome + " and my name in japanese is " + pokemon.nome_japones);
+      
 
 // 3.
 // Adicione uma nova propriedade ao
@@ -22,7 +29,7 @@
 // (ou algo do tipo) e defina
 // ela como `true` ou `false`.
 
-
+    pokemon.can_fly = true
 
 
 // 4.
