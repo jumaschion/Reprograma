@@ -1,7 +1,6 @@
 //CORREÇÃO PROFESSORA
 const inputTweet = document.getElementById("tweetComposerInput")
 const buttonCreateTweet = document.querySelector(".tweet-composer__button")
-
 const tweetsTimeline = document.querySelector(".tweets-timeline")
 
 buttonCreateTweet.addEventListener("click", function(e){
@@ -11,6 +10,13 @@ buttonCreateTweet.addEventListener("click", function(e){
         return false;
     }
 
+    const date = new Date()
+    const month = date.toLocaleString("pt-br", {month: "short"})
+    const day = date.getDate()
+    const minutes = date.getMinutes()
+    const hour = date.getHours()
+    const seconds = date.getSeconds()
+    
     //criei a div que abraça todo o conteúdo
     const div = document.createElement("div")
     div.className = "tweets-timeline__box";
@@ -20,7 +26,7 @@ buttonCreateTweet.addEventListener("click", function(e){
     header.className = "tweets-timeline__header";
     header.innerHTML = `<span class="tweets-timeline__name">Isabelle Galvão</span>\
         <span class="tweets-timeline__username">@galvaoiisabelle</span>\
-        <span class="tweets-timeline__date">1 de ago</span>`
+        <span class="tweets-timeline__date"> ${day} de ${month} às ${hour}:${minutes}:${seconds} seconds </span>`
 
 //criei um elemento novo pro tweet
 
@@ -43,14 +49,48 @@ tweetsTimeline.insertBefore(div, tweetsTimeline.childNodes[0])
 
 inputTweet.value = "";
 
+
 const botaoExcluir = document.querySelector(".tweets-timeline__delete-button")
 
-botaoExcluir.addEventListener("click", function(evento){
+botaoExcluir.addEventListener("click", function(){
     evento.preventDefault()
     div.remove()
 
     })
+
+    const contador = document.getElementById('tweetComposerCounter').innerHTML = 280
 })
+
+
+inputTweet.addEventListener("keydown", function(event){
+    const contador = document.getElementById('tweetComposerCounter')
+    const textBox = this
+    const maxLength = 280
+    
+    const caracteresDisponiveis = maxLength -
+    textBox.value.length 
+
+    contador.innerHTML = caracteresDisponiveis
+    
+    if(caracteresDisponiveis <= 15){
+        contador.style.color = "red"
+    }
+    
+    if  (caracteresDisponiveis <= 0){
+        document.querySelector(".tweet-composer__button").disabled = true
+        
+    } else {
+        contador.style.color = "white"
+        document.querySelector(".tweet-composer__button").disabled = false
+    }
+    
+    // if(textBox.value.length > maxLength){
+    //     textBox.value = textBox.value.substring(0, maxLength)
+    // }
+    
+})
+
+
 
 ////////// CÓDIGO JULIA //////////
 
