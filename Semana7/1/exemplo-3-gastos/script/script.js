@@ -12,7 +12,7 @@
 
       //criar colunas
       const colunaNome = document.createElement("td")
-      const colunaNomeTexto = document.createTextNode(transacaoInputName.value)
+      const colunaNomeTexto = document.createTextNode(transacaoInputName.value)  << TROCAR PARA NOME DA CONSTANTE
       colunaNome.appendChild(colunaNomeTexto);
 
       const colunaValor = document.createElement("td")
