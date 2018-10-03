@@ -1,0 +1,182 @@
+/* GERAL */
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  background-image: linear-gradient(rgba(79, 13, 167, 0.363) 15%, rgba(234, 159, 236, 0.726) 60%, rgba(202, 63, 214, 0.192) 95% );
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* CONTEÚDO */
+main {
+  background: #f6f7f5e1; /* Old browsers */
+  box-shadow: 1px 2px 10px black;
+  width: 30%;
+  margin: 5% auto;
+  padding: 20px 0px 5px 0px;
+  border-radius: 2%;
+}
+h1 {
+  font-size: 20px;
+  text-shadow: 0px 0px 1px rgba(7, 15, 13, 0.726);
+  text-align: center; 
+  padding: 15px;
+}
+table {
+  border-collapse: collapse;
+  transition: all 1s;
+}
+
+/*btn*/
+.btn__adicionar {
+  background-color: #7050bb;
+  width: 100%;
+  display: block;
+  border: none;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 15px;
+  cursor: pointer;
+}
+.btn__adicionar:hover {
+  background-color: #7050bbd0;
+}
+.adicionar__tarefa {
+  width: 100%;
+  height: 100px;
+  padding: 30px;
+  font-size: 1.8em;
+}
+.x {
+  font-size: 2em;
+  color: red;
+  cursor: pointer;
+  transform: all 1s;
+  position: relative;
+  left: 1px;  
+}
+i {
+  font-size: 1em;
+}
+.x:hover{
+  transform: scale(1.5);
+}
+.btn__box {
+  margin: 15px 30px 5px 30px;
+  display: flex;
+  justify-content: space-between; 
+}
+.btn {
+  background-color: #7050bb;
+  width: 35%;
+  display: inline-block;
+  border: none;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 4%;
+  border-radius: 5%;
+  transition: all .5s;
+  cursor: pointer;
+}
+.btn:hover{
+  transform: scale(1.1)
+}
+.btn__excluirTudo {
+  background-color: rgba(241, 75, 75, 0.829)
+}
+.btn__checkAll {
+  background-color: rgba(61, 161, 61, 0.644);
+}
+
+/*BTN MODAL */
+
+
+
+
+.tarefa {
+  background: #f5ededc9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+p {
+  font-size: 2em;
+}
+.tarefa:hover {
+  box-shadow: 1px 2px 10px rgba(22, 21, 21, 0.685);
+
+  
+}
+.tarefa:nth-child(odd) { 
+  background:#e3e3e7; 
+}
+.tarefaOnDrag {
+  background-color: rgba(139, 8, 139, 0.103);
+  color: rgba(0, 0, 0, 0.767);
+  font-weight: bold;
+  border: 4px inset rgba(41, 8, 48, 0.39);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+#arrowTop {    
+    color: purple;
+    text-shadow: 0px 0px 5px white;
+    position: fixed;
+    bottom: 5%;
+    right: 25%;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    font-size: 4em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+@media (max-width: 1200px) {
+    main {
+    width: 60%;
+    margin: 15% auto;
+  }
+}
+
+@media (max-width: 760px) {
+    main {
+    width: 65%;
+    margin: 15% auto;
+  }
+  #arrowTop {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+    main {
+    width: 85%;
+    margin: 15% auto;
+  }
+  #arrowTop {
+    display: none;
+  }
+}

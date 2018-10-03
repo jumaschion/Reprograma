@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Projeto To Do List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1> Add a new task!</h1>
+    </header>
+    <div class="adicionar">
+      <input class="adicionar__tarefa" type="text" placeholder="Add tasks">
+      <button class="btn__adicionar"> ADD </button>
+    </div>
+    <div class="tabela">
+      <ul></ul>
+    </div>
+
+    <div class="btn__box">
+
+        <button class="btn btn__excluirTudo"> Delete All </button>
+        <button class="btn btn__checkAll" onclick="checkAll()"> Check All </button>
+      
+    </div>
+  </main>
+  <button id="arrowTop" hidden>&#9650;</button>
+  <script src="script/script.js"></script>
+</body>
+
+</html>
