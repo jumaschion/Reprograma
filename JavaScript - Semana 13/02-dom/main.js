@@ -4,6 +4,7 @@ const input_cpf = document.getElementById("cpfInput")
 
 input_cpf.addEventListener("focus", function(){
         this.value = "___.___.___-__"
+      
         
         setTimeout(function(){
         input_cpf.setSelectionRange(0,0)
@@ -11,7 +12,9 @@ input_cpf.addEventListener("focus", function(){
 })  
 
     input_cpf.addEventListener("blur", function(){
+     if   (this.value === "___.___.___-__") {
         this.value = ""
+     }
     })
 
     input_cpf.addEventListener("keydown", function(event) {
