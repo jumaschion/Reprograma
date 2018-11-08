@@ -16,9 +16,3 @@
 
 
 
-
-        AIzaSyDBAGlMe1bpDZYjkj3Fp8ZrNJ2ZyKCuhqU
-        005892220303326603557:bkr1wexohd8
-
-
-  https://www.googleapis.com/customsearch/v1?key=AIzaSyDBAGlMe1bpDZYjkj3Fp8ZrNJ2ZyKCuhqU&cx=005892220303326603557:bkr1wexohd8&q=nirvana&searchType=image&imgSize=huge
